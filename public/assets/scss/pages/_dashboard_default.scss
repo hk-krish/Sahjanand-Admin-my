@@ -312,7 +312,7 @@ div.dataTables_wrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: start; 
+    align-items: flex-start; 
     h1{
       margin-bottom: 3px;
     }
@@ -325,7 +325,7 @@ div.dataTables_wrapper {
     border-top-left-radius: $card-border-radius;
   }
   .premium-course-img {
-    background-image: url(../../images/dashboard/premium-courses.png);
+    // background-image: url(../../images/dashboard/premium-courses.png);
     background-size: cover;
     background-repeat: no-repeat; 
     background-position: center right;

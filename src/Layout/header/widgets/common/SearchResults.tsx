@@ -1,10 +1,10 @@
-import SvgIcon from "../../../../coreComponents/SvgIcon";
-import { useAppDispatch } from "../../../../reduxToolkit/hooks";
+import SvgIcon from "../../../../CoreComponents/SvgIcon";
+import { useAppDispatch } from "../../../../ReduxToolkit/Hooks";
 import { SearchListProps } from "../../../../Types/Layout";
-import { setResponsiveSearch } from "../../../../reduxToolkit/reducers/layout/layoutSlice";
+import { setResponsiveSearch } from "../../../../ReduxToolkit/Slice/Layout/LayoutSlice";
 import { Fragment } from "react/jsx-runtime";
 import Link from "next/link";
-import SearchNotFoundClass from "@/coreComponents/SearchNotFoundClass";
+import SearchNotFoundClass from "@/CoreComponents/SearchNotFoundClass";
 
 const SearchResults: React.FC<SearchListProps> = ({ searchedArray, setSearchedWord , onItemClick}) => {
   const dispatch = useAppDispatch();

@@ -1,13 +1,14 @@
 // import { LogIn } from "react-feather";
-import { Href } from "@/Constant";
+import { Href, ImagePath } from "@/Constant";
 import Link from "next/link";
-import SvgIcon from "../../../coreComponents/SvgIcon";
+import SvgIcon from "../../../CoreComponents/SvgIcon";
+import Image from "next/image";
 
 const Profile = () => {
   return (
     <li className="profile-nav onhover-dropdown p-0 m-0">
       <div className="d-flex profile-media align-items-center">
-        {/* <Image className="b-r-6 img-40" src={dynamicImage(`dashboard/profile.png`)} alt="profile" /> */}
+        <Image width={40} height={40} className="b-r-6 img-40" src={`${ImagePath}user/user.png`} alt="profile" />
         <div className="flex-grow-1">
           <span>Helen Walter</span>
           <p className="mb-0">

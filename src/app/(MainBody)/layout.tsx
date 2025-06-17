@@ -1,14 +1,15 @@
 "use client";
 import Footer from "@/Layout/Footer";
-import Header from "@/Layout/header";
-import Sidebar from "@/Layout/sidebar";
+import Header from "@/Layout/Header";
+import Sidebar from "@/Layout/Sidebar";
 import TapTop from "@/Layout/TapTop";
-import { useAppDispatch, useAppSelector } from "@/reduxToolkit/hooks";
-import { addSidebarTypes, setSideBarToggle } from "@/reduxToolkit/reducers/layout/themeCustomizerSlice";
-import { ReactNode, useEffect } from "react";
+import { useAppDispatch, useAppSelector } from "@/ReduxToolkit/Hooks";
+import { addSidebarTypes, setSideBarToggle } from "@/ReduxToolkit/Slice/Layout/ThemeCustomizerSlice";
+import { ChildrenType } from "@/Types/Layout";
+import { FC, useEffect } from "react";
 import { ToastContainer } from "react-toastify";
 
-export default function RootLayout({ children }: { children: ReactNode }) {
+const RootLayout: FC<ChildrenType> = ({ children }) => {
   const { sidebarTypes, sideBarToggle } = useAppSelector((state) => state.themeCustomizer);
   const dispatch = useAppDispatch();
 
@@ -43,9 +44,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           <Footer />
         </div>
       </div>
-      {/* <ThemeCustomizer /> */}
       <TapTop />
       <ToastContainer />
     </>
   );
-}
+};
+
+export default RootLayout;

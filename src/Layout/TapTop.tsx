@@ -1,10 +1,10 @@
+import { ArrowUp, ArrowUp2 } from "iconsax-react";
 import { useEffect, useState } from "react";
-// import { ChevronsUp } from "react-feather";
 
 const TapTop = () => {
   const [tapTopStyle, setTapTopStyle] = useState("none");
 
-  // const executeScroll = () => window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  const executeScroll = () => window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   const handleScroll = () => {
     if (window.scrollY > 0) setTapTopStyle("block");
     else setTapTopStyle("none");
@@ -18,7 +18,7 @@ const TapTop = () => {
 
   return (
     <div className="tap-top" style={{ display: tapTopStyle }}>
-      {/* <ChevronsUp onClick={() => executeScroll()} /> */}
+      <ArrowUp variant="Broken" onClick={() => executeScroll()} />
     </div>
   );
 };

@@ -1,44 +1,49 @@
-import { RouteList } from "@/Constant";
-import SimpleBar from "simplebar-react";
-import ConfigDB from "../../config/Theme";
-import { useAppSelector } from "../../reduxToolkit/hooks";
-import LogoWrapper from "./widgets/LogoWrapper";
-import MenuList from "./widgets/menuList";
+import { ImagePath } from "@/Constant";
+import Image from "next/image";
 import Link from "next/link";
+import ConfigDB from "../../Config/Theme";
+import { useAppSelector } from "../../ReduxToolkit/Hooks";
+import LogoWrapper from "./Widgets/LogoWrapper";
+import MenuList from "./Widgets/MenuList";
 
 const Sidebar = () => {
   const { pinedMenu } = useAppSelector((state) => state.layout);
-  const { margin, sideBarToggle } = useAppSelector((state) => state.themeCustomizer);
-  const sidebarIconType = useAppSelector((state) => state.themeCustomizer.sideBarIconType);
-  const sideBarIcon = sidebarIconType || ConfigDB.settings.sidebar.iconType;
+  const { sideBarToggle } = useAppSelector((state) => state.themeCustomizer);
+  const sideBarIcon = ConfigDB.settings.sidebar.iconType;
   return (
     <div className={`sidebar-wrapper ${sideBarToggle ? "close_icon" : ""}`} data-layout={`${sideBarIcon}-svg`}>
       <div>
         <LogoWrapper />
         <nav className="sidebar-main">
-
-          <div id="sidebar-menu" style={{ position: "inherit", marginLeft: margin + "px" }}>
+          <div id="sidebar-menu">
             <ul className="sidebar-links custom-scrollbar" id="simple-bar">
-              <SimpleBar style={{ width: "68px", height: "350px" }}>
-                <li className="back-btn">
-                  <Link href={RouteList.Dashboard}>
-                    {/* <Image className="img-fluid" src={dynamicImage(`logo/logo-icon.png`)} alt="" /> */}
-                  </Link>
-                  <div className="mobile-back text-end">
-                    <span>Back</span>
-                    <i className="fa fa-angle-right ps-2" />
+              <div className="simplebar-wrapper">
+                <div className="simplebar-mask">
+                  <div className="simplebar-offset">
+                    <div className="simplebar-content-wrapper">
+                      <div className="simplebar-content">
+                        <li className="back-btn">
+                          <Link href={`/dashboard/default`}>
+                            <Image width={32} height={32} className="img-fluid" src={`${ImagePath}/logo/logo-icon.png`} alt="" />
+                          </Link>
+                          <div className="mobile-back text-end">
+                            <span>Back </span>
+                            <i className="fa fa-angle-right ps-2" aria-hidden="true"></i>
+                          </div>
+                        </li>
+                        <li className={`pin-title sidebar-main-title ${pinedMenu.length > 0 ? "show" : ""} `}>
+                          <div>
+                            <h6>Pinned</h6>
+                          </div>
+                        </li>
+                        <MenuList />
+                      </div>
+                    </div>
                   </div>
-                </li>
-                <li className={`pin-title sidebar-main-title ${pinedMenu.length > 0 ? "show" : ""}`}>
-                  <div>
-                    <h6>Pinned</h6>
-                  </div>
-                </li>
-                <MenuList />
-              </SimpleBar>
+                </div>
+              </div>
             </ul>
           </div>
-
         </nav>
       </div>
     </div>

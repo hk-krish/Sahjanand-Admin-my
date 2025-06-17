@@ -1,8 +1,8 @@
-import { useAppDispatch } from "../../../reduxToolkit/hooks";
-import { toggleSidebar } from "../../../reduxToolkit/reducers/layout/themeCustomizerSlice";
-import SvgIcon from "../../../coreComponents/SvgIcon";
+import { useAppDispatch } from "../../../ReduxToolkit/Hooks";
+import { toggleSidebar } from "../../../ReduxToolkit/Slice/Layout/ThemeCustomizerSlice";
+import SvgIcon from "../../../CoreComponents/SvgIcon";
 import Link from "next/link";
-import { RouteList } from "@/Constant";
+import { ImagePath, RouteList } from "@/Constant";
 
 const LogoWrapper = () => {
   const dispatch = useAppDispatch();
@@ -10,17 +10,14 @@ const LogoWrapper = () => {
   return (
     <>
       <div className="logo-wrapper">
-        <Link href={RouteList.Dashboard}>
-          {/* <Image className="img-fluid for-light" src={dynamicImage(`logo/logo.png`)} alt="" /> */}
-          {/* <Image className="img-fluid for-dark" src={dynamicImage(`logo/logo_dark.png`)} alt="" /> */}
-        </Link>
+        <Link href={RouteList.Dashboard}>{/* <img className="img-fluid for-light" src={`${ImagePath}logo/logo.png`} alt="" /> */}</Link>
         <div className="toggle-sidebar" onClick={() => dispatch(toggleSidebar())}>
           <SvgIcon className="sidebar-toggle" iconId="toggle-icon" />
         </div>
       </div>
       <div className="logo-icon-wrapper">
         <Link href={RouteList.Dashboard}>
-          {/* <Image className="img-fluid" src={dynamicImage(`logo/logo-icon.png`)} alt="" /> */}
+          <img className="img-fluid" src={`${ImagePath}logo/logo-icon.png`} alt="" />
         </Link>
       </div>
     </>

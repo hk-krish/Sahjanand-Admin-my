@@ -1,14 +1,13 @@
 import { Fragment, useEffect } from "react";
 import { useDispatch } from "react-redux";
-import ConfigDB from "../../../../config/Theme";
+import ConfigDB from "../../../../Config/Theme";
 import { MenuItem, MenuListProps } from "../../../../Types/Layout";
-import { useAppSelector } from "../../../../reduxToolkit/hooks";
-import { setPinedMenu } from "../../../../reduxToolkit/reducers/layout/layoutSlice";
-import SvgIcon from "../../../../coreComponents/SvgIcon";
+import { useAppSelector } from "../../../../ReduxToolkit/Hooks";
+import { setPinedMenu } from "../../../../ReduxToolkit/Slice/Layout/LayoutSlice";
+import SvgIcon from "../../../../CoreComponents/SvgIcon";
 import { Href } from "@/Constant";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-
 
 const SubMenu: React.FC<MenuListProps> = ({ menu, setActiveMenu, activeMenu, level }) => {
   const dispatch = useDispatch();
@@ -59,18 +58,18 @@ const SubMenu: React.FC<MenuListProps> = ({ menu, setActiveMenu, activeMenu, lev
             href={item.url ? item.url : Href}
             onClick={() => {
               const temp = [...activeMenu]; // Copy array
-              temp[level] = temp[level]?.title !== item.title ? item : {} as MenuItem; // store full object
+              temp[level] = temp[level]?.title !== item.title ? item : ({} as MenuItem); // store full object
               setActiveMenu(temp);
-            }}>
+            }}
+          >
             {item.icon && <SvgIcon className={`${sideBarIcon}-icon`} iconId={`${sideBarIcon}-${item.icon}`} />}
             {level === 0 ? <span>{`${item.title}`}</span> : `${item.title}`}
             {item.menu && <div className="according-menu">{activeMenu[level]?.title === item.title ? <i className="fa fa-angle-down" /> : <i className="fa fa-angle-right" />}</div>}
           </Link>
           {item.menu && (
-            <ul className={level !== 0 ? "submenu-content open-sub-mega-menu" : "sidebar-submenu"}
-              style={{display: `${(item.menu ? item.menu.map((innerItem) => ActiveNavLinkUrl(innerItem.url)).includes(true) : ActiveNavLinkUrl(item.url)) || activeMenu[level]?.title === item.title ? "block" : "none"}`}}>
+            <ul className={level !== 0 ? "submenu-content open-sub-mega-menu" : "sidebar-submenu"} style={{ display: `${(item.menu ? item.menu.map((innerItem) => ActiveNavLinkUrl(innerItem.url)).includes(true) : ActiveNavLinkUrl(item.url)) || activeMenu[level]?.title === item.title ? "block" : "none"}` }}>
               <SubMenu menu={item.menu} activeMenu={activeMenu} setActiveMenu={setActiveMenu} level={level + 1} />
-            </ul> 
+            </ul>
           )}
         </li>
       ))}

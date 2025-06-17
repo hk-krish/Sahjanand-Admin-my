@@ -81,8 +81,8 @@ $heading_5: 18px;
 $heading_6: 16px;
 $common_letter_spacing: 0.5px;
 //fonts
-$font-Nunito: 'Nunito Sans', sans-serif;
-$font-roboto: 'Roboto';
+$font-Nunito: var(--nunito, sans-serif);
+$font-roboto: var(--roboto, sans-serif);
 $font-serif: sans-serif;
 $landing-dmsans: 'DM Sans', sans-serif;
 $landing-cursive: 'Courgette', cursive;

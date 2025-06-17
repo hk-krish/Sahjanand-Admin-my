@@ -1,5 +1,5 @@
 "use client";
-import { store } from "@/reduxToolkit/store";
+import { store } from "@/ReduxToolkit/Store";
 import { ReactNode } from "react";
 import { Provider } from "react-redux";
 

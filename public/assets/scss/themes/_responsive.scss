@@ -1903,7 +1903,7 @@
           > ul {
             > li {
               &:nth-child(2) {
-                display: none !important;
+                // display: none !important;
               }
             }
           }
@@ -2939,7 +2939,8 @@
               }
               .profile-media {
                 img {
-                  width: 25px !important;
+                  width: 30px !important;
+                  height: 30px !important;
                 }
               }
             }

@@ -1,10 +1,10 @@
 import { Col, Row } from "reactstrap";
-import { useAppSelector } from "../../reduxToolkit/hooks";
-import FullScreen from "./widgets/FullScreen";
-import LogoWrapper from "./widgets/LogoWrapper";
-import Profile from "./widgets/Profile";
-import SearchBar from "./widgets/SearchBar";
-import SearchInput from "./widgets/SearchInput";
+import { useAppSelector } from "../../ReduxToolkit/Hooks";
+import FullScreen from "./Widgets/FullScreen";
+import LogoWrapper from "./Widgets/LogoWrapper";
+import Profile from "./Widgets/Profile";
+import SearchBar from "./Widgets/SearchBar";
+import SearchInput from "./Widgets/SearchInput";
 
 const Header = () => {
 

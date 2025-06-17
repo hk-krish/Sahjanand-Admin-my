@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { Col, Form, Input } from "reactstrap";
 import { MenuItem, SearchItems } from "../../../Types/Layout";
-import SearchResults from "./common/SearchResults";
-import SvgIcon from "../../../coreComponents/SvgIcon";
+import SearchResults from "./Common/SearchResults";
+import SvgIcon from "../../../CoreComponents/SvgIcon";
 import { menuList } from "@/Data/Layout/SidebarMenuList";
 import { useRouter } from "next/navigation";
 

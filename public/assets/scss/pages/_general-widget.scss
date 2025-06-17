@@ -148,7 +148,7 @@
         .sale-value{
           display: flex;
           align-items: center;
-          justify-content: start;
+          justify-content: flex-start;
           gap: 2px;
           svg{ 
             height: 20px;
@@ -161,7 +161,7 @@
             display: flex;
             align-items: center;
             gap: 2px;
-            justify-content: start; 
+            justify-content: flex-start; 
             span{
               &:last-child{
                 text-overflow:ellipsis;

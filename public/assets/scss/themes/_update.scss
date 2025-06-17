@@ -1503,7 +1503,7 @@ body.offcanvas {
               text-align: end;
               display: flex;
               align-items: center;
-              justify-content: end;
+              justify-content: flex-end;
               &.product-info {
                 .product-image {
                   img {
@@ -1717,7 +1717,7 @@ body.offcanvas {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url("../../images/email-template/invoice-3/bg-0.png");
+    // background-image: url("../../images/email-template/invoice-3/bg-0.png");
     .sub-invoice-header {
       .logo {
         img {
@@ -2676,7 +2676,7 @@ body.offcanvas {
     right: unset !important;
   }
   z-index: 9;
-  color: $white;
+  stroke: $white;
   background: var(--theme-default);
   border: none;
   padding: 7px;
@@ -2688,7 +2688,7 @@ body.offcanvas {
     opacity: 1;
   }
   svg {
-    width: 20px;
+    width: 25px;
   }
 }
 .pageLimit {
@@ -2697,7 +2697,7 @@ body.offcanvas {
 
 .rbt-input-multi {
   &.focus {
-    border-color: #640269 !important;
+    border-color: $primary-color !important;
     box-shadow: 0 0 0 0.25rem rgba(100, 2, 105, 0.3) !important;
   }
 }

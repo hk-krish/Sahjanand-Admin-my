@@ -1,7 +1,7 @@
 import { Href } from "@/Constant";
-import React, { useState } from "react";
+import { Maximize2 } from "iconsax-react";
+import { useState } from "react";
 import { NavLink } from "reactstrap";
-// import { Maximize } from 'react-feather';
 
 const FullScreen = () => {
   const [fullScreen, setFullScreen] = useState(false);
@@ -13,7 +13,9 @@ const FullScreen = () => {
 
   return (
     <li onClick={() => fullScreenHandler(!fullScreen)}>
-      <NavLink href={Href}>{/* <Maximize className="svg-color" /> */}</NavLink>
+      <NavLink href={Href}>
+        <Maximize2 />
+      </NavLink>
     </li>
   );
 };

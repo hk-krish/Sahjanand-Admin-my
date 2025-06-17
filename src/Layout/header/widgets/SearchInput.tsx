@@ -2,11 +2,11 @@ import React from "react";
 import { ChangeEvent, useEffect, useState } from "react";
 import { Input } from "reactstrap";
 import { menuList } from "../../../Data/Layout/SidebarMenuList";
-import { getLinkItemsArray, setResponsiveSearch } from "../../../reduxToolkit/reducers/layout/layoutSlice";
+import { setResponsiveSearch } from "../../../ReduxToolkit/Slice/Layout/LayoutSlice";
 import { MenuItem, SearchItems } from "../../../Types/Layout";
-import SearchResults from "./common/SearchResults";
-import { useAppDispatch, useAppSelector } from "../../../reduxToolkit/hooks";
-import SvgIcon from "../../../coreComponents/SvgIcon";
+import SearchResults from "./Common/SearchResults";
+import { useAppDispatch, useAppSelector } from "../../../ReduxToolkit/Hooks";
+import SvgIcon from "../../../CoreComponents/SvgIcon";
 
 const SearchInput = () => {
   const { responsiveSearch } = useAppSelector((state) => state.layout);
@@ -34,7 +34,6 @@ const SearchInput = () => {
       });
     });
     setArr(suggesionArray);
-    dispatch(getLinkItemsArray(suggesionArray));
   }, [dispatch]);
 
   const handleSearch = (e: ChangeEvent<HTMLInputElement>) => {

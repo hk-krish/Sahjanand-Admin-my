@@ -1,5 +1,5 @@
 import { Col, Container, Row } from "reactstrap";
-import SvgIcon from "../coreComponents/SvgIcon";
+import SvgIcon from "../CoreComponents/SvgIcon";
 
 const Footer = () => {
 

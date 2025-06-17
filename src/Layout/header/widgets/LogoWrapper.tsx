@@ -1,9 +1,9 @@
 import { ImagePath, RouteList } from "@/Constant";
 import Link from "next/link";
 import { Col } from "reactstrap";
-import SvgIcon from "../../../coreComponents/SvgIcon";
-import { useAppDispatch } from "../../../reduxToolkit/hooks";
-import { toggleSidebar } from "../../../reduxToolkit/reducers/layout/themeCustomizerSlice";
+import SvgIcon from "../../../CoreComponents/SvgIcon";
+import { useAppDispatch } from "../../../ReduxToolkit/Hooks";
+import { toggleSidebar } from "../../../ReduxToolkit/Slice/Layout/ThemeCustomizerSlice";
 
 const LogoWrapper = () => {
   const dispatch = useAppDispatch();
@@ -13,7 +13,6 @@ const LogoWrapper = () => {
       <div className="logo-wrapper">
         <Link href={RouteList.Dashboard}>
           <img className="img-fluid for-light" src={`${ImagePath}logo/logo.png`} alt="" />
-          <img className="img-fluid for-dark" src={`${ImagePath}logo/logo_dark.png`} alt="" />
         </Link>
       </div>
       <div className="toggle-sidebar" onClick={() => dispatch(toggleSidebar())}>
