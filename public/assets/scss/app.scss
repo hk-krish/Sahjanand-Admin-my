@@ -1,6 +1,7 @@
 @import "bootstrap/dist/css/bootstrap.min.css";
 @import "react-toastify/dist/ReactToastify.css";
 
+@import "vendors/font-awesome.scss";
 @import "vendors/icomoon.scss";
 @import "responsive.scss";
 @import "react-plugin.scss";
@@ -14,5 +15,8 @@
 
 //react-bootstrap-typeahead
 // @import 'react-bootstrap-typeahead/css/Typeahead.css';
+
+//react-quill-new
+@import 'react-quill-new/dist/quill.snow.css';
 
 @import "style.scss";

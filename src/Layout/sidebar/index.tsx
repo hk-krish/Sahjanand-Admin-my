@@ -28,7 +28,7 @@ const Sidebar = () => {
                           </Link>
                           <div className="mobile-back text-end">
                             <span>Back </span>
-                            <i className="fa fa-angle-right ps-2" aria-hidden="true"></i>
+                            <i className="fa fa-angle-right ps-2"/>
                           </div>
                         </li>
                         <li className={`pin-title sidebar-main-title ${pinedMenu.length > 0 ? "show" : ""} `}>

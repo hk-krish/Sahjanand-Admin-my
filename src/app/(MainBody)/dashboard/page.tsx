@@ -1,9 +1,8 @@
-import React from 'react'
+"use client";
+import DashBoardContainer from "@/Components/Dashboard";
 
 const DashBoard = () => {
-  return (
-    <div>DashBoard</div>
-  )
-}
+  return <DashBoardContainer />;
+};
 
-export default DashBoard
+export default DashBoard;

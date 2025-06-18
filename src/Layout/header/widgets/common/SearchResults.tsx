@@ -5,8 +5,9 @@ import { setResponsiveSearch } from "../../../../ReduxToolkit/Slice/Layout/Layou
 import { Fragment } from "react/jsx-runtime";
 import Link from "next/link";
 import SearchNotFoundClass from "@/CoreComponents/SearchNotFoundClass";
+import { FC } from "react";
 
-const SearchResults: React.FC<SearchListProps> = ({ searchedArray, setSearchedWord , onItemClick}) => {
+const SearchResults: FC<SearchListProps> = ({ searchedArray, setSearchedWord , onItemClick}) => {
   const dispatch = useAppDispatch();
   const handleSearch = (url: string) => {
     setSearchedWord("");

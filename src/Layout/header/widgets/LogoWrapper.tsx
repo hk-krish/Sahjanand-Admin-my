@@ -4,6 +4,7 @@ import { Col } from "reactstrap";
 import SvgIcon from "../../../CoreComponents/SvgIcon";
 import { useAppDispatch } from "../../../ReduxToolkit/Hooks";
 import { toggleSidebar } from "../../../ReduxToolkit/Slice/Layout/ThemeCustomizerSlice";
+import Image from "next/image";
 
 const LogoWrapper = () => {
   const dispatch = useAppDispatch();
@@ -12,7 +13,7 @@ const LogoWrapper = () => {
     <Col className="header-logo-wrapper col-auto p-0">
       <div className="logo-wrapper">
         <Link href={RouteList.Dashboard}>
-          <img className="img-fluid for-light" src={`${ImagePath}logo/logo.png`} alt="" />
+          <Image width={140} height={50} priority className="img-fluid for-light" src={`${ImagePath}logo/logo.png`} alt="" />
         </Link>
       </div>
       <div className="toggle-sidebar" onClick={() => dispatch(toggleSidebar())}>

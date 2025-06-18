@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { ChangeEvent, useEffect, useState } from "react";
 import { Col, Form, Input } from "reactstrap";
 import { MenuItem, SearchItems } from "../../../Types/Layout";
 import SearchResults from "./Common/SearchResults";
@@ -22,7 +22,7 @@ const SearchBar = () => {
     setArr(suggestionArray);
   }, []);
 
-  const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleSearch = (e: ChangeEvent<HTMLInputElement>) => {
     const searchKey = e.target.value;
     setSearchedWord(searchKey);
     if (searchKey !== "") {
@@ -50,8 +50,7 @@ const SearchBar = () => {
         <div className="form-group">
           <div className="typeahead">
             <div className="u-posRelative">
-              <Input className="form-control-plaintext w-100" type="text" placeholder="Type to Search .." 
-                value={searchedWord} onChange={handleSearch} />
+              <Input className="form-control-plaintext w-100" type="text" placeholder="Type to Search .." value={searchedWord} onChange={handleSearch} />
               <SvgIcon className="svg-color" iconId="search" />
             </div>
             <div className={`typeahead-menu custom-scrollbar ${searchedWord.length ? "is-open" : ""}`}>

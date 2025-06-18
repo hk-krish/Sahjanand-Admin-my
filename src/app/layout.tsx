@@ -4,6 +4,7 @@ import { FC, ReactNode } from "react";
 import "../../src/index.scss";
 import MainProvider from "./MainProvider";
 import { ChildrenType } from "@/Types/Layout";
+import NoSsr from "@/Utils/NoSsr";
 
 const nunito = Nunito_Sans({
   weight: ["200", "300", "400", "600", "700", "800", "900"],
@@ -32,7 +33,9 @@ const RootLayout: FC<ChildrenType> = ({ children }) => {
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
       </head>
       <body suppressHydrationWarning={true} className={nunito.className || roboto.className}>
-        <MainProvider>{children}</MainProvider>
+        <NoSsr>
+          <MainProvider>{children}</MainProvider>
+        </NoSsr>
       </body>
     </html>
   );

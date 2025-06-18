@@ -6,7 +6,7 @@ $body-color: #F5F5F5;
 $main-body-color: #F5F5F5; 
 
 // Theme colors variables
-$primary-color: #640269;
+$primary-color: rgb(204, 162, 112);
 $secondary-color: #c06240;
 $success-color: #28A745;
 $info-color : #17A2B8;
@@ -81,8 +81,8 @@ $heading_5: 18px;
 $heading_6: 16px;
 $common_letter_spacing: 0.5px;
 //fonts
-$font-Nunito: var(--nunito, sans-serif);
-$font-roboto: var(--roboto, sans-serif);
+$font-Nunito: 'Nunito Sans', sans-serif;
+$font-roboto: 'Roboto';
 $font-serif: sans-serif;
 $landing-dmsans: 'DM Sans', sans-serif;
 $landing-cursive: 'Courgette', cursive;

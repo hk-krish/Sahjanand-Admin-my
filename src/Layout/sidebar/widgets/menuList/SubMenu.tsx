@@ -1,15 +1,15 @@
-import { Fragment, useEffect } from "react";
+import { Href } from "@/Constant";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { FC, Fragment, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import ConfigDB from "../../../../Config/Theme";
-import { MenuItem, MenuListProps } from "../../../../Types/Layout";
+import SvgIcon from "../../../../CoreComponents/SvgIcon";
 import { useAppSelector } from "../../../../ReduxToolkit/Hooks";
 import { setPinedMenu } from "../../../../ReduxToolkit/Slice/Layout/LayoutSlice";
-import SvgIcon from "../../../../CoreComponents/SvgIcon";
-import { Href } from "@/Constant";
-import { usePathname } from "next/navigation";
-import Link from "next/link";
+import { MenuItem, MenuListProps } from "../../../../Types/Layout";
 
-const SubMenu: React.FC<MenuListProps> = ({ menu, setActiveMenu, activeMenu, level }) => {
+const SubMenu: FC<MenuListProps> = ({ menu, setActiveMenu, activeMenu, level }) => {
   const dispatch = useDispatch();
   const location = usePathname();
   const { pinedMenu } = useAppSelector((state) => state.layout);
