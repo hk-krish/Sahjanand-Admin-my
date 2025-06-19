@@ -11,14 +11,23 @@ export const RouteList = {
     Product: "/product",
     AddProduct: "/product/add-product",
   },
+  Category: {
+    Category: "/category",
+    AddCategory: "/category/add-category",
+  },
+  FAQ: "/faq",
+  Banners:"/banners",
+  TrackOrder: "/track-order",
+
+
+
+  
 
   Pages: {
     Blog: "/pages/blog",
     BulkEnquiry: "/pages/bulk-enquiry",
     ContactUs: "/pages/contact-us",
-    FAQ: "/pages/faq",
     Search: "/pages/search",
-    TrackOrder: "/pages/track-order",
   },
 
   Wishlist: "/wishlist",
@@ -29,7 +38,6 @@ export const RouteList = {
   ProductDetails: "/product-details",
   NewArrival: "/new-arrival",
   BestSelling: "/best-selling",
-  Category: "/category",
   CategoryDetails: "/category-details",
   Collections: {
     Border: "/collections/border",

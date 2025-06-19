@@ -64,7 +64,7 @@
           color: $theme-font-color;
           font-size: 20px;
           text-transform: uppercase;
-          font-weight: 600; 
+          font-weight: 600;
         }
       }
       .desc {
@@ -130,7 +130,7 @@
       font-family: $font-Nunito, $font-serif;
     }
   }
-  .social-media { 
+  .social-media {
     a {
       padding: 0 15px;
       color: $semi-dark;
@@ -142,27 +142,15 @@
     }
   }
 }
-//Edit profile //
-.edit-profile {
-  .profile-title {
-    .d-flex {
-      align-items: center;
-      margin-bottom: 30px;
-      .flex-grow-1 {
-        margin-left: 14px;
-        [dir="rtl"] & {
-          margin-left: unset;
-          margin-right: 14px;
-        }
-      }
-    }
-  }
+.custom-table {
   table {
     thead {
       tr {
         th {
           padding: 18px 18px 18px 18px;
           text-align: center;
+          font-size: 16px;
+          font-weight: 600;
         }
       }
     }
@@ -171,6 +159,17 @@
         td {
           padding: 8px 18px 8px 18px;
           text-align: center;
+          font-size: calc(13px + (15 - 13) * ((100vw - 320px) / (1920 - 320)));
+          border-bottom: 1px dashed #dedbdb;
+          .action {
+            width: 20px;
+            stroke: $white;
+          }
+        }
+      }
+      tr:last-child {
+        td {
+          border-bottom: none;
         }
       }
     }
@@ -184,6 +183,7 @@
     }
   }
 }
+
 /**=====================
     3.41 User-profile CSS Ends
 ==========================**/

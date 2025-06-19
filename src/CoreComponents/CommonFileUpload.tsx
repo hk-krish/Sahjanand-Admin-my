@@ -13,7 +13,7 @@ const CommonFileUpload: FC<{ multiple?: boolean }> = ({ multiple }) => {
       {uploadedFiles.length === 0 ? (
         <Dropzone onDrop={onDrop}>
           {({ getRootProps, getInputProps }) => (
-            <div {...getRootProps()} className="dropzone-container input-air-dark">
+            <div {...getRootProps()} className="dropzone-container">
               <input {...getInputProps()} />
               <div className="dz-message needsclick">
                 <GalleryAdd color="#cca270" variant="Bulk"/>
@@ -40,7 +40,6 @@ const CommonFileUpload: FC<{ multiple?: boolean }> = ({ multiple }) => {
               <div key={index} className="file-card">
                 {file.type.startsWith("image/") ? <img src={URL.createObjectURL(file)} alt={file.name} className="file-thumbnail" /> : <div className="file-placeholder">{file.name.split(".").pop()?.toUpperCase()} File</div>}
                 <p className="file-name">{file.name}</p>
-                <p className="file-size">{(file.size / 1024).toFixed(2)} KB</p>
                 <button onClick={() => removeFile(index)} className="remove-button" title="Remove file">
                   ×
                 </button>

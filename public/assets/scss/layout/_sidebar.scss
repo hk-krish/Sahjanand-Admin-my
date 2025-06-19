@@ -912,7 +912,7 @@ sidebar-wrapper/**=====================
       width: 24%;
     }
     .sidebar-list {
-      i.fa-thumb-tack {
+      i.fa-thumbtack {
         visibility: hidden;
         position: absolute;
         top: 19px;
@@ -924,7 +924,7 @@ sidebar-wrapper/**=====================
         }
       }
       &:hover {
-        i.fa-thumb-tack {
+        i.fa-thumbtack {
           visibility: hidden;
           cursor: pointer;
         }
@@ -1318,7 +1318,7 @@ sidebar-wrapper/**=====================
   // left sidebar css
   &.compact-wrapper {
     .sidebar-list {
-      i.fa-thumb-tack {
+      i.fa-thumbtack {
         visibility: hidden;
         position: absolute;
         top: 11px;
@@ -1331,7 +1331,7 @@ sidebar-wrapper/**=====================
         }
       }
       &:hover {
-        i.fa-thumb-tack {
+        i.fa-thumbtack {
           visibility: visible;
           cursor: pointer;
         }
@@ -1537,7 +1537,7 @@ sidebar-wrapper/**=====================
               display: none;
             }
             .sidebar-list {
-              i.fa-thumb-tack {
+              i.fa-thumbtack {
                 visibility: hidden;
                 position: absolute;
                 top: 13px;
@@ -1553,7 +1553,7 @@ sidebar-wrapper/**=====================
                 }
               }
               &:hover { 
-                i.fa-thumb-tack {
+                i.fa-thumbtack {
                   visibility: visible;
                   cursor: pointer;
                 }
@@ -1907,7 +1907,6 @@ sidebar-wrapper/**=====================
         i {
           vertical-align: middle;
           color: $theme-font-color;
-          font-weight: 500;
         }
       }
       .main-menu {
@@ -2110,7 +2109,7 @@ sidebar-wrapper/**=====================
       }
     }
     .sidebar-list {
-      i.fa-thumb-tack {
+      i.fa-thumbtack {
         visibility: hidden;
         position: absolute;
         top: 8px;
@@ -2129,7 +2128,7 @@ sidebar-wrapper/**=====================
         }
       }
       &:hover {
-        i.fa-thumb-tack {
+        i.fa-thumbtack {
           visibility: visible;
           cursor: pointer;
           z-index: 1;
@@ -2442,7 +2441,7 @@ sidebar-wrapper/**=====================
       margin-right: 15px;
     }
     .sidebar-list {
-      i.fa-thumb-tack {
+      i.fa-thumbtack {
         visibility: hidden;
         position: absolute;
         top: 8px;
@@ -2461,7 +2460,7 @@ sidebar-wrapper/**=====================
         }
       }
       &:hover {
-        i.fa-thumb-tack {
+        i.fa-thumbtack {
           visibility: visible;
         }
       }

@@ -7,7 +7,7 @@ import { Fragment } from "react";
 import { useForm } from "react-hook-form";
 import { Button, Card, CardBody, Col, Form, FormGroup, Label, Row } from "reactstrap";
 
-const AddProductContainer = () => {
+const AddCategoryContainer = () => {
   const {
     register,
     handleSubmit,
@@ -22,11 +22,11 @@ const AddProductContainer = () => {
 
   return (
     <Fragment>
-      <Breadcrumbs mainTitle="Add Product" parent="Product" />
+      <Breadcrumbs mainTitle="Add Category" parent="Product" />
       <Row>
         <Col sm="12">
           <Card>
-            <CommonCardHeader title="Add Product" />
+            <CommonCardHeader title="Add Category" />
             <CardBody>
               <div className="input-items">
                 <Form onSubmit={handleSubmit(onSubmit)}>
@@ -57,7 +57,11 @@ const AddProductContainer = () => {
                     <Col md="6">
                       <div className="input-box">
                         <Label>Project Progress (%)</Label>
-                        <input type="number" placeholder="ProjectProgressPlaceholder" {...register("progress")} />
+                        <select className="form-select" {...register("progress")}>
+                          <option disabled>Static Menu</option>
+                          <option>Simple</option>
+                          <option>Classified</option>
+                        </select>
                         {errors.progress && <p className="text-danger">{errors.progress.message}</p>}
                       </div>
                     </Col>
@@ -88,4 +92,4 @@ const AddProductContainer = () => {
   );
 };
 
-export default AddProductContainer;
+export default AddCategoryContainer;

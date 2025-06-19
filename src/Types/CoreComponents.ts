@@ -24,11 +24,14 @@ export interface CardSubtitle {
 }
 
 export interface CardHeaderProp {
-  title: string;
+  title?: string;
   headClass?: string;
   tagClass?: string;
   isEditing?:boolean;
   setIsEditing?: (val: boolean) => void;
+  Search?: (key: string) => void;
+  btnTitle?: string;
+  btnClick?: () => void;
 }
 
 export interface InformationProp {
@@ -43,6 +46,6 @@ export interface InformationProp {
 export interface RatioImageProp {
   className?: string;
   src: string;
-  alt: string;
+  alt?: string;
   style?:{ height : number }
 }

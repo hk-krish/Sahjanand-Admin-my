@@ -1,18 +1,15 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  isAddProductModal: false,
+
 };
 
 const ProductSlice = createSlice({
-  name: "layout",
+  name: "Product",
   initialState,
   reducers: {
-    setAddProductModal: (state) => {
-      state.isAddProductModal = !state.isAddProductModal;
-    },
   },
 });
 
-export const { setAddProductModal } = ProductSlice.actions;
+export const { } = ProductSlice.actions;
 export default ProductSlice.reducer;

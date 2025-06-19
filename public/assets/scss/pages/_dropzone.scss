@@ -1,20 +1,18 @@
 /* Dropzone for initial file upload */
 .dropzone-container {
-  border: 2px dashed var(--theme-default);
+  border: 1px dashed #dedbdb;
   padding: 20px;
-  text-align: center;
   cursor: pointer;
-  background: rgba(204, 162, 112, 0.1);
+  background-color: #fff;
   border-radius: 6px;
   margin-bottom: 15px;
-  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1), -1px -1px 4px rgba(255, 255, 255, 0.5);
   transition: all 0.3s ease;
-}
-
-.dropzone-container:hover {
-  background: #f8fdf8;
-  border-color: #3da745;
-  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.15), -1px -1px 6px rgba(255, 255, 255, 0.6);
+  min-height: 150px;
+  display: flow-root;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
 .dropzone-container p {
@@ -32,14 +30,7 @@
   background: rgba(204, 162, 112, 0.1);
   border-radius: 6px;
   margin-bottom: 15px;
-  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1), -1px -1px 4px rgba(255, 255, 255, 0.5);
   transition: all 0.3s ease;
-}
-
-.add-more-files-zone:hover {
-  background: #f8fdf8;
-  border-color: #3da745;
-  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.15), -1px -1px 6px rgba(255, 255, 255, 0.6);
 }
 
 .add-more-files-zone p {
@@ -62,27 +53,24 @@
   flex-direction: column;
   align-items: center;
   padding: 10px;
-  border: 1px solid #ddd;
+  border: 1px dashed #dedbdb;
   border-radius: 6px;
-  background: linear-gradient(145deg, #f9f9f9, #ffffff);
-  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1), -1px -1px 4px rgba(255, 255, 255, 0.6);
+  background-color: #fff;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .file-card:hover {
   transform: translateY(-2px);
-  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15), -2px -2px 8px rgba(255, 255, 255, 0.7);
 }
 
 /* File thumbnail (for images) */
 .file-thumbnail {
-  width: 80px;
-  height: 80px;
+  width: 120px;
+  height: 120px;
   margin-bottom: 8px;
   object-fit: cover;
   border-radius: 6px;
   border: 1px solid #ddd;
-  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* Placeholder for non-image files */
@@ -98,7 +86,6 @@
   border: 1px solid #ddd;
   border-radius: 6px;
   font-size: 12px;
-  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* File name and size */
@@ -122,8 +109,7 @@
   border: none;
   color: white;
   font-size: 12px;
-  padding: 4px 8px;
-  border-radius: 16px;
+  border-radius: 50%;
   cursor: pointer;
   transition: background 0.3s ease, transform 0.2s ease;
 }

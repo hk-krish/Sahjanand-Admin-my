@@ -52,7 +52,7 @@ const SubMenu: FC<MenuListProps> = ({ menu, setActiveMenu, activeMenu, level }) 
     <Fragment>
       {menu?.map((item, i) => (
         <li key={i} className={`${level === 0 ? "sidebar-list" : ""} ${item.title && pinedMenu.includes(item.title) ? "pined" : ""} ${(item.menu ? item.menu.map((innerItem) => ActiveNavLinkUrl(innerItem.url)).includes(true) : ActiveNavLinkUrl(item.url)) || activeMenu[level]?.title === item.title ? "active" : ""}`}>
-          {level === 0 && <i className="fa fa-thumb-tack" onClick={() => item.title && handlePined(item.title)}></i>}
+          {level === 0 && <i className="fa fa-thumbtack" onClick={() => item.title && handlePined(item.title)}></i>}
           <Link
             className={`${level === 0 ? "sidebar-link sidebar-title" : ""} ${(item.menu ? item.menu.map((innerItem) => ActiveNavLinkUrl(innerItem.url)).includes(true) : ActiveNavLinkUrl(item.url)) || activeMenu[level]?.title === item.title ? "active" : ""}`}
             href={item.url ? item.url : Href}

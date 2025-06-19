@@ -7,7 +7,7 @@ import { ChildrenType } from "@/Types/Layout";
 import NoSsr from "@/Utils/NoSsr";
 
 const nunito = Nunito_Sans({
-  weight: ["200", "300", "400", "600", "700", "800", "900"],
+  weight: ["200", "300", "400","500", "600", "700", "800", "900"],
   style: ["normal", "italic"],
   subsets: ["latin"],
   display: "swap",
