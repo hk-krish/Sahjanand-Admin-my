@@ -1,13 +1,13 @@
 import CommonFileUpload from "@/CoreComponents/CommonFileUpload";
 import { useAppDispatch, useAppSelector } from "@/ReduxToolkit/Hooks";
-import { setAddBannerModal } from "@/ReduxToolkit/Slice/BannersSlice";
-import { AddBannerSchema } from "@/Utils/ValidationSchemas";
+import { setAddBlogModal } from "@/ReduxToolkit/Slice/BlogSlice";
+import { AddBlogSchema } from "@/Utils/ValidationSchemas";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
 import { Button, Col, Form, Label, Modal, ModalBody, ModalHeader, Row } from "reactstrap";
 
-const AddBannersModal = ({ isEdit, setEdit }: any) => {
-  const { isAddBannerModal } = useAppSelector((state) => state.banners);
+const AddBlogModal = ({ isEdit, setEdit }: any) => {
+  const { isAddBlogModal } = useAppSelector((state) => state.blog);
   const dispatch = useAppDispatch();
 
   const {
@@ -15,12 +15,12 @@ const AddBannersModal = ({ isEdit, setEdit }: any) => {
     handleSubmit,
     reset,
     formState: { errors },
-  } = useForm({ resolver: yupResolver(AddBannerSchema) });
+  } = useForm({ resolver: yupResolver(AddBlogSchema) });
 
   const onCloseModal = () => {
     reset();
     // setEdit(false);
-    dispatch(setAddBannerModal());
+    dispatch(setAddBlogModal());
   };
 
   const onSubmit = async (data: any) => {
@@ -30,9 +30,9 @@ const AddBannersModal = ({ isEdit, setEdit }: any) => {
   };
 
   return (
-    <Modal centered isOpen={isAddBannerModal} toggle={onCloseModal}>
+    <Modal centered isOpen={isAddBlogModal} toggle={onCloseModal}>
       <ModalHeader className="position-relative border-0">
-        {isEdit ? "Edit Banner" : "Add Banner"}
+        {isEdit ? "Edit Blog" : "Add Blog"}
         <Button color="transparent" onClick={onCloseModal} className="btn-close" />
       </ModalHeader>
       <ModalBody className="pt-0">
@@ -48,12 +48,12 @@ const AddBannersModal = ({ isEdit, setEdit }: any) => {
                 <Col className="custom-dropzone-project input-box">
                   <div className="mb-3">
                     <Label>Upload Image</Label>
-                    <CommonFileUpload multiple />
+                    <CommonFileUpload />
                   </div>
                 </Col>
                 <Col xs="12">
                   <Button type="submit" color="primary" className="w-100">
-                    {isEdit ? "Update Banner" : "Save Banner"}
+                    {isEdit ? "Update Blog" : "Save Blog"}
                   </Button>
                 </Col>
               </Row>
@@ -65,4 +65,4 @@ const AddBannersModal = ({ isEdit, setEdit }: any) => {
   );
 };
 
-export default AddBannersModal;
+export default AddBlogModal;

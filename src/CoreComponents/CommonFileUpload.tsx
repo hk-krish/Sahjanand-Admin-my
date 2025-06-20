@@ -1,7 +1,6 @@
+import { GalleryAdd } from "iconsax-react";
 import { FC, Fragment, useState } from "react";
 import Dropzone from "react-dropzone";
-import SvgIcon from "./SvgIcon";
-import { GalleryAdd } from "iconsax-react";
 
 const CommonFileUpload: FC<{ multiple?: boolean }> = ({ multiple }) => {
   const [uploadedFiles, setUploadedFiles] = useState<File[]>([]);

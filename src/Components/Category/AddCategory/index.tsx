@@ -1,11 +1,11 @@
 import Breadcrumbs from "@/CoreComponents/Breadcrumbs";
 import CommonCardHeader from "@/CoreComponents/CommonCardHeader";
 import CommonFileUpload from "@/CoreComponents/CommonFileUpload";
-import { AddProductSchema } from "@/Utils/ValidationSchemas";
+import { AddCategorySchema } from "@/Utils/ValidationSchemas";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { Fragment } from "react";
 import { useForm } from "react-hook-form";
-import { Button, Card, CardBody, Col, Form, FormGroup, Label, Row } from "reactstrap";
+import { Button, Card, CardBody, Col, Form, Label, Row } from "reactstrap";
 
 const AddCategoryContainer = () => {
   const {
@@ -13,7 +13,7 @@ const AddCategoryContainer = () => {
     handleSubmit,
     formState: { errors },
   } = useForm({
-    resolver: yupResolver(AddProductSchema),
+    resolver: yupResolver(AddCategorySchema),
   });
 
   const onSubmit = (data: any) => {

@@ -1,5 +1,5 @@
 // import { LogIn } from "react-feather";
-import { Href, ImagePath } from "@/Constant";
+import { Href, ImagePath, RouteList } from "@/Constant";
 import Link from "next/link";
 import SvgIcon from "../../../CoreComponents/SvgIcon";
 import Image from "next/image";
@@ -18,6 +18,11 @@ const Profile = () => {
         </div>
       </div>
       <ul className="profile-dropdown onhover-show-div">
+        <li>
+          <Link href={RouteList.ChangePassword}>
+            <span>Change Password</span>
+          </Link>
+        </li>
         <li>
           <Link href={Href}>
             {/* <LogIn /> */}

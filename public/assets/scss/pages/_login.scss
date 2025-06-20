@@ -7,7 +7,7 @@
   align-items: center;
   justify-content: center;
   margin: 0 auto;
-  // background: url(../../images/other-images/coming-soon-bg.jpg);
+  background: url(../../images/other-images/coming-soon-bg.jpg);
   background-position: center;
   padding: 30px 12px;
   background-repeat: no-repeat;
@@ -42,91 +42,36 @@
     box-shadow: 0 0 37px rgba(8, 21, 66, 0.05);
     margin: 0 auto;
     background-color: $white;
-    .theme-form {
-      .social {
-        .btn-showcase {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex-wrap: wrap;
-          .btn-light {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-          }
-        }
-      }
+    p {
+      color: $font-gray-color;
     }
-    .theme-form {
-      h4 {
-        margin-bottom: 5px;
-      }
+    .input-box {
+      margin-bottom: 15px;
       label {
-        font-size: 15px;
-        letter-spacing: 0.4px;
-      }
-      .checkbox label::before {
-        background-color: $card-body-color;
-        border: 1px solid #dfdfdf;
-      }
-      .or {
-        position: relative;
-        &:before {
-          content: "";
-          position: absolute;
-          width: 65%;
-          height: 2px;
-          background-color: rgba($primary-color, 0.1);
-          top: 9px;
-          z-index: 0;
-          right: 0;
-        }
+        font-size: calc(13px + (14 - 13) * ((100vw - 320px) / (1920 - 320)));
+        font-weight: 700;
+        text-transform: capitalize;
+        color: #3d3d3d;
+        padding-top: 0px;
       }
       input {
-        background-color: rgba($primary-color, 0.1);
-        transition: all 0.3s ease;
-        &::-webkit-input-placeholder {
-          color: $light-text;
-        }
-        &:hover,
-        &:focus {
-          border: 1px solid lighten($semi-dark, 35%);
-          box-shadow: none !important;
-          transition: all 0.3s ease;
-        }
-      }
-      input[type="text"],
-      input[type="password"] {
-        padding: 6px 12px;
-        color: #898989 !important;
-        border: 1px solid var(--bs-border-color);
-      }
-      input[type="text"]::placeholder,
-      input[type="password"]::placeholder {
-        color: #898989 !important;
-        font-size: 14px !important;
-        font-weight: 400;
-      }
-      p {
-        margin-bottom: 25px;
-        font-size: 14px;
-        color: $dark-gray;
-      }
-      .form-group {
-        margin-bottom: 10px;
         position: relative;
-      }
-      .link {
-        position: absolute;
-        top: 10px;
-        right: 0;
+        background-color: #fff;
+        padding: 10px 16px;
+        border: 1px dashed #dedbdb !important;
+        width: 100%;
+        border-radius: 4px;
+        &:focus,
+        &:focus-visible {
+          outline: none !important;
+        }
       }
     }
   }
 }
 .show-hide {
   position: absolute;
-  top: 52px;
+  top: 50%;
   right: 20px;
   transform: translateY(-50%);
   span {

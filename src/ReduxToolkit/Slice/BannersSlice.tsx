@@ -5,7 +5,7 @@ const initialState = {
 };
 
 const BannersSlice = createSlice({
-  name: "Bann",
+  name: "Banners",
   initialState,
   reducers: {
     setAddBannerModal: (state) => {
